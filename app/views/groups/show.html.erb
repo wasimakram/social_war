@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ranking:</b>
+  <%= @group.ranking %>
+</p>
+
+<p>
+  <b>Money:</b>
+  <%= @group.money %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @group.points %>
+</p>
+
+<p>
+  <b>Speciality:</b>
+  <%= @group.speciality %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @group.user_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @group.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

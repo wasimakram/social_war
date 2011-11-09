@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ranking: 1
+  money: 1.5
+  points: 1.5
+  speciality: MyString
+  user_id: 1
+  title: MyString
+
+two:
+  ranking: 1
+  money: 1.5
+  points: 1.5
+  speciality: MyString
+  user_id: 1
+  title: MyString

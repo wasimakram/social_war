@@ -11,7 +11,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111108220007) do
+ActiveRecord::Schema.define(:version => 20111108235111) do
+
+  create_table "groups", :force => true do |t|
+    t.integer  "ranking"
+    t.float    "money"
+    t.float    "points"
+    t.string   "speciality"
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "title"
+    t.float    "price"
+    t.integer  "count"
+    t.integer  "itinerary_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "itineraries", :force => true do |t|
+    t.integer  "group_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", :force => true do |t|
+    t.float    "experience"
+    t.float    "health"
+    t.float    "energy"
+    t.float    "stamina"
+    t.string   "speciality"
+    t.string   "name"
+    t.integer  "group_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -25,6 +68,15 @@ ActiveRecord::Schema.define(:version => 20111108220007) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "tasks", :force => true do |t|
+    t.string   "title"
+    t.text     "desc"
+    t.float    "exp_required"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

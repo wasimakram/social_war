@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Experience:</b>
+  <%= @player.experience %>
+</p>
+
+<p>
+  <b>Health:</b>
+  <%= @player.health %>
+</p>
+
+<p>
+  <b>Energy:</b>
+  <%= @player.energy %>
+</p>
+
+<p>
+  <b>Stamina:</b>
+  <%= @player.stamina %>
+</p>
+
+<p>
+  <b>Speciality:</b>
+  <%= @player.speciality %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @player.name %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @player.group_id %>
+</p>
+
+<p>
+  <b>Avatar file name:</b>
+  <%= @player.avatar_file_name %>
+</p>
+
+<p>
+  <b>Avatar content type:</b>
+  <%= @player.avatar_content_type %>
+</p>
+
+<p>
+  <b>Avatar file size:</b>
+  <%= @player.avatar_file_size %>
+</p>
+
+<p>
+  <b>Avatar updated at:</b>
+  <%= @player.avatar_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

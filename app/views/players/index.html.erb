@@ -1,0 +1,43 @@
+<h1>Listing players</h1>
+
+<table>
+  <tr>
+    <th>Experience</th>
+    <th>Health</th>
+    <th>Energy</th>
+    <th>Stamina</th>
+    <th>Speciality</th>
+    <th>Name</th>
+    <th>Group</th>
+    <th>Avatar file name</th>
+    <th>Avatar content type</th>
+    <th>Avatar file size</th>
+    <th>Avatar updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @players.each do |player| %>
+  <tr>
+    <td><%= player.experience %></td>
+    <td><%= player.health %></td>
+    <td><%= player.energy %></td>
+    <td><%= player.stamina %></td>
+    <td><%= player.speciality %></td>
+    <td><%= player.name %></td>
+    <td><%= player.group_id %></td>
+    <td><%= player.avatar_file_name %></td>
+    <td><%= player.avatar_content_type %></td>
+    <td><%= player.avatar_file_size %></td>
+    <td><%= player.avatar_updated_at %></td>
+    <td><%= link_to 'Show', player %></td>
+    <td><%= link_to 'Edit', edit_player_path(player) %></td>
+    <td><%= link_to 'Destroy', player, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Player', new_player_path %>

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Socialwar::Application.load_tasks
+SocialWar::Application.load_tasks

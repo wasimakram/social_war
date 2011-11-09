@@ -1,5 +1,5 @@
-Socialwar::Application.configure do
-  config.action_mailer.default_url_options = { :host => 'socialwar.dev' }
+SocialWar::Application.configure do
+  config.action_mailer.default_url_options = { :host => 'social_war.dev' }
   
   # Settings specified here will take precedence over those in config/application.rb
 

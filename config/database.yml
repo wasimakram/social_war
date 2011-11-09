@@ -8,18 +8,18 @@ common: &common
   # socket: /tmp/mysql.sock
 
 development:
-  database: socialwar_dev
+  database: social_war_dev
   <<: *common
 
 test:
-  database: socialwar_test
+  database: social_war_test
   <<: *common
 
 production:
-  database: socialwar_prod
+  database: social_war_prod
   <<: *common
 
 cucumber:
-  database: socialwar_cucumber
+  database: social_war_cucumber
   <<: *common
 
